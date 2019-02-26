@@ -51,7 +51,7 @@ def get_occupation(data, hometown)
       array = array.to_a
       array.collect do |thing|
         if thing.find {|x| x == hometown}
-        return array[3]
+        return array[3][1]
         end
       end
     end
