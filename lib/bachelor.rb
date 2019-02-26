@@ -70,5 +70,6 @@ def get_average_age_for_season(data, season)
       end
     end
   end
-  ages.reduce {|sum, el| sum + el }.to_i / ages.size
+  ages = ages.reduce {|sum, el| sum + el }.to_i / ages.size
+  ages.round
 end
