@@ -31,7 +31,18 @@ def get_contestant_name(data, occupation)
 end
 
 def count_contestants_by_hometown(data, hometown)
-  # code here
+  counter = 0
+  data.collect do |season, season_data|
+    season_data.collect do |array|
+      array= array.to_a
+        array.collect do |data|
+        if data.include?(hometown)
+        counter += 1
+        end
+      end
+    end
+  end
+  counter
 end
 
 def get_occupation(data, hometown)
